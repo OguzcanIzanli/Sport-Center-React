@@ -1,7 +1,9 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./Navbar.style.css";
 
 const Navbar = () => {
+  console.log("navbar");
+
   // Navbar Dropdown Menu Actions
   const [dropdownMenu, setDropdown] = useState({
     dropdown: "",
@@ -29,11 +31,13 @@ const Navbar = () => {
   });
 
   // Close the dropdown menu when click the document except navbar
-  document.addEventListener("click", (e) => {
-    if (e.clientY > 60) {
-      setDropdown({ dropdown: "", dropdownIcon: "fa-solid fa-bars" });
-    }
-  });
+  useEffect(() => {
+    document.addEventListener("click", (e) => {
+      if (e.clientY > 60) {
+        setDropdown({ dropdown: "", dropdownIcon: "fa-solid fa-bars" });
+      }
+    });
+  }, []);
 
   return (
     <header className={`${navbarBackGround}`}>

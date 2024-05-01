@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./Classes.style.css";
-import data from "./classesData.json";
+import data from "../data/classesData.json";
 
 const Classes = () => {
   const [selected, setSelected] = useState("yoga");
@@ -23,54 +23,20 @@ const Classes = () => {
         </div>
 
         <div className="classesBtns">
-          <a
-            id="yoga"
-            className={`classesBtn ${selected == "yoga" ? "selected" : ""}`}
-            onClick={handleButton}
-            href=""
-          >
-            Yoga
-            <span className={`caret ${selected == "yoga" ? "" : "hidden"}`}>
-              <i className="fa-solid fa-caret-down"></i>
-            </span>
-          </a>
-          <a
-            id="group"
-            className={`classesBtn ${selected == "group" ? "selected" : ""}`}
-            onClick={handleButton}
-            href=""
-          >
-            Group
-            <span className={`caret ${selected == "group" ? "" : "hidden"}`}>
-              <i className="fa-solid fa-caret-down"></i>
-            </span>
-          </a>
-          <a
-            id="solo"
-            className={`classesBtn ${selected == "solo" ? "selected" : ""}`}
-            onClick={handleButton}
-            href=""
-          >
-            Solo
-            <span className={`caret ${selected == "solo" ? "" : "hidden"}`}>
-              <i className="fa-solid fa-caret-down"></i>
-            </span>
-          </a>
-          <a
-            id="stretching"
-            className={`classesBtn ${
-              selected == "stretching" ? "selected" : ""
-            }`}
-            onClick={handleButton}
-            href=""
-          >
-            Stretching
-            <span
-              className={`caret ${selected == "stretching" ? "" : "hidden"}`}
+          {Object.keys(data).map((key) => (
+            <a
+              key={key}
+              id={key}
+              className={`classesBtn ${selected === key ? "selected" : ""}`}
+              onClick={handleButton}
+              href=""
             >
-              <i className="fa-solid fa-caret-down"></i>
-            </span>
-          </a>
+              {key.charAt(0).toUpperCase() + key.slice(1)}
+              <span className={`caret ${selected === key ? "" : "hidden"}`}>
+                <i className="fa-solid fa-caret-down"></i>
+              </span>
+            </a>
+          ))}
         </div>
 
         <div id={data[selected].id} className="classes">
@@ -82,7 +48,7 @@ const Classes = () => {
             <p>{data[selected].secondProgram}</p>
             <p>{data[selected].thirdrogram}</p>
           </div>
-          <img src={data[selected].image} />
+          <img src={data[selected].image} alt={data[selected].id} />
         </div>
       </div>
     </div>
