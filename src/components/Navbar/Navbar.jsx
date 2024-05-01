@@ -1,9 +1,16 @@
 import { useEffect, useState } from "react";
 import "./Navbar.style.css";
 
-const Navbar = () => {
-  console.log("navbar");
+const anchorItems = [
+  "hero",
+  "classes",
+  "trainers",
+  "purchase",
+  "review",
+  "contact",
+];
 
+const Navbar = () => {
   // Navbar Dropdown Menu Actions
   const [dropdownMenu, setDropdown] = useState({
     dropdown: "",
@@ -39,6 +46,17 @@ const Navbar = () => {
     });
   }, []);
 
+  // Smooth scroll transition between sections on the page
+  const handleClick = (event) => {
+    event.preventDefault();
+
+    const sectionId = event.target.getAttribute("href");
+
+    document
+      .querySelector(sectionId)
+      .scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+
   return (
     <header className={`${navbarBackGround}`}>
       <div className="container">
@@ -48,12 +66,12 @@ const Navbar = () => {
           </a>
 
           <div className={`navbarBtns ${dropdownMenu.dropdown}`}>
-            <a href="#hero">Home</a>
-            <a href="#classes">Classes</a>
-            <a href="#trainers">Trainer</a>
-            <a href="#purchase">Products</a>
-            <a href="#review">Review</a>
-            <a href="#contact">Contact</a>
+            {anchorItems.map((item) => (
+              <a key={item} onClick={handleClick} href={`#${item}`}>
+                {item[0].toUpperCase() + item.slice(1)}
+              </a>
+            ))}
+
             <a href="">JOIN US</a>
           </div>
           <div className="navbarDropdownBtn" onClick={dropdownBtn}>
