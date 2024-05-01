@@ -1,8 +1,24 @@
-# React + Vite
+# Sport Center
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+In this project, a responsive web page has been created with React for 576px and 768px screen sizes. The navbar allows you to navigate between sections, each with its own unique features.
 
-Currently, two official plugins are available:
+## Live Site
+You can reach live website link at [Sport Center](https://powerfullsportcenterreact.netlify.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## How To Use
+To clone and run this application, you'll need [Git](https://git-scm.com/) and [Node.js](https://nodejs.org/en) installed on your computer.
+From your comment line:
+
+```
+# Clone this repository
+$ git clone https://github.com/OguzcanIzanli/Sport-Center-React.git
+
+# Go into the repository
+$ cd Sport-Center-React
+
+# Install dependencies
+$ npm install
+
+# Run the app
+$ npm run dev
+```

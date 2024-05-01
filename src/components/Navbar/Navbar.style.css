@@ -7,6 +7,10 @@ header {
   z-index: 2;
 }
 
+.navbarScrollBackground {
+  background-color: var(--color-b);
+}
+
 .container {
   width: 80%;
   margin: 0 auto;

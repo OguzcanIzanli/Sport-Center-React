@@ -1,6 +1,6 @@
 /* Hero Background Image */
 .heroBackgroundImage {
-  background-image: url("../../../public/images/hero-man.jpg");
+  background-image: url("../../../images/hero-man.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
