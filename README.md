@@ -1,6 +1,6 @@
 # Sport Center
 
-In this project, a responsive web page has been created with React for 576px and 768px screen sizes. The navbar allows you to navigate between sections, each with its own unique features.
+In this project, a responsive web page has been created with React for 576px and 768px screen sizes. The navbar allows you to navigate between sections, each with its unique features.
 
 ## Live Site
 You can reach live website link at [Sport Center](https://powerfullsportcenterreact.netlify.app/)
