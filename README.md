@@ -28,6 +28,8 @@ Sport Center is a responsive web page created with React, designed to fit to scr
 
 You can access the live website [here](https://powerfullsportcenterreact.netlify.app/).
 
+https://github.com/OguzcanIzanli/Sport-Center-React/assets/95178772/2c0a8b6a-4cce-4d9b-8792-f3d36db61bea
+
 ## How To Use
 
 To clone and run this application, you'll need [Git](https://git-scm.com/) and [Node.js](https://nodejs.org/en) installed on your computer.
